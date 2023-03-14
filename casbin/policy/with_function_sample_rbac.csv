@@ -1,0 +1,22 @@
+p, data1_admin, data1, read, allow
+p, data1_admin, data1, write, allow
+p, data1_admin, data1, delete, allow
+p, data1_member, data1, read, allow
+p, mike, data1, delete, deny
+
+p, data2_admin, data2, read, allow
+p, data2_admin, data2, write, allow
+p, data2_admin, data2, delete, allow
+p, data2_member, data2, read, allow
+
+p2, data1_member, data1, write, 1, allow
+p2, data2_member, data2, write, 1, allow
+
+p3, data1_member, data1, delete, 1, 8, allow
+p3, data2_member, data2, delete, 1, 1, allow
+
+g, alice, data1_admin
+g, mike, data1_admin
+g, mike, data2_admin
+g, john, data1_member
+g, john, data2_member
